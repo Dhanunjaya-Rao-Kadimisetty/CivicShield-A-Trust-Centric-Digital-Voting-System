@@ -1,0 +1,280 @@
+.cs-results-card {
+  max-width: 920px;
+  width: 100%;
+}
+
+.cs-results-header {
+  border-bottom: 1px solid rgba(149, 248, 236, 0.2);
+}
+
+.cs-results-alert {
+  border-radius: 12px;
+}
+
+.cs-results-muted {
+  color: #a7c6c3;
+}
+
+.cs-results-stat {
+  border: 1px solid rgba(149, 248, 236, 0.22);
+  border-radius: 14px;
+  padding: 0.95rem 0.8rem;
+  background: rgba(8, 17, 27, 0.46);
+}
+
+.cs-results-stat-value {
+  color: #f3fffd;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cs-results-stat-label {
+  color: #a7c6c3;
+  font-size: 0.85rem;
+}
+
+.cs-results-table-wrap {
+  border: 1px solid rgba(149, 248, 236, 0.22);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(8, 17, 27, 0.46);
+}
+
+.cs-results-table {
+  color: #d4ebe8;
+}
+
+.cs-results-table thead th {
+  background: rgba(16, 43, 58, 0.9);
+  color: #e4fffb;
+  border: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.cs-results-table tbody td {
+  background: transparent;
+  color: #cce6e3;
+  border-color: rgba(149, 248, 236, 0.14);
+  vertical-align: middle;
+}
+
+.cs-results-table tbody tr:hover td {
+  background: rgba(24, 164, 154, 0.16);
+}
+
+.cs-party-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cs-party-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.cs-receipt-sheet {
+  width: 760px;
+  background: #f4faf9;
+  color: #12313f;
+  font-family: "Segoe UI", Arial, sans-serif;
+  border: 1px solid #d6ebe8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 42, 58, 0.15);
+}
+
+.cs-receipt-topbar {
+  height: 8px;
+  background: linear-gradient(90deg, #12857d 0%, #1ea89e 55%, #3bb8ae 100%);
+}
+
+.cs-receipt-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 24px 16px;
+  border-bottom: 1px solid #d6ebe8;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fcfb 100%);
+}
+
+.cs-receipt-brand-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #e9fffd;
+  background: linear-gradient(145deg, #0f6f77 0%, #18a49a 100%);
+}
+
+.cs-receipt-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #0d2f3f;
+  line-height: 1.25;
+}
+
+.cs-receipt-header p {
+  margin: 3px 0 0;
+  color: #456a76;
+  font-size: 0.98rem;
+}
+
+.cs-receipt-pill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 14px 24px 4px;
+}
+
+.cs-receipt-pill {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #0f5d68;
+  background: #d9f3ef;
+  border: 1px solid #bfe7e1;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.cs-receipt-section {
+  margin: 12px 24px;
+  border: 1px solid #d6ebe8;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 14px;
+}
+
+.cs-receipt-item {
+  margin-bottom: 10px;
+}
+
+.cs-receipt-item:last-of-type {
+  margin-bottom: 12px;
+}
+
+.cs-receipt-item span {
+  display: block;
+  font-size: 0.78rem;
+  color: #4f7380;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.cs-receipt-item strong {
+  display: block;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: #102f3d;
+  word-break: break-all;
+}
+
+.cs-receipt-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  border-top: 1px dashed #cbe4e0;
+  padding-top: 10px;
+}
+
+.cs-receipt-meta-label {
+  font-size: 0.76rem;
+  color: #5f8089;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.cs-receipt-meta-grid p {
+  margin: 4px 0 0;
+  color: #113746;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cs-receipt-verify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cs-receipt-verify h4 {
+  margin: 0 0 6px;
+  font-size: 1.03rem;
+  color: #0e3644;
+}
+
+.cs-receipt-verify p {
+  margin: 0;
+  color: #4b6e79;
+  font-size: 0.9rem;
+}
+
+.cs-receipt-verify small {
+  display: block;
+  margin-top: 8px;
+  color: #5d7f88;
+  font-size: 0.73rem;
+  word-break: break-all;
+  max-width: 440px;
+}
+
+.cs-receipt-verify canvas {
+  border: 1px solid #d0e7e3;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 5px;
+}
+
+.cs-receipt-footer {
+  margin: 14px 24px 20px;
+  padding-top: 10px;
+  border-top: 1px solid #d6ebe8;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #52757e;
+}
+
+@media (max-width: 768px) {
+  .cs-results-stat-value {
+    font-size: 1.25rem;
+  }
+
+  .cs-results-table thead th,
+  .cs-results-table tbody td {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cs-results-card .card-body {
+    padding: 1rem !important;
+  }
+
+  .cs-results-stat {
+    padding: 0.8rem 0.65rem;
+  }
+
+  .cs-results-table thead th,
+  .cs-results-table tbody td {
+    font-size: 0.85rem;
+  }
+
+  .cs-receipt-header {
+    padding: 16px 16px 12px;
+  }
+
+  .cs-receipt-header h2 {
+    font-size: 1.35rem;
+  }
+}

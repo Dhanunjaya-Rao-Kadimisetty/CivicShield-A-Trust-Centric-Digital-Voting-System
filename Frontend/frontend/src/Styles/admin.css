@@ -1,0 +1,572 @@
+:root {
+  --cs-admin-bg: #0b1423;
+  --cs-admin-panel: rgba(15, 28, 44, 0.95);
+  --cs-admin-accent: #22b3a7;
+  --cs-admin-accent-strong: #13988f;
+  --cs-admin-border: rgba(144, 233, 226, 0.24);
+  --cs-admin-text: #e6f7f6;
+  --cs-admin-muted: #9fbcbc;
+}
+
+.cs-entry-card {
+  max-width: 640px;
+}
+
+.cs-entry-toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  background: rgba(15, 30, 48, 0.65);
+  border: 1px solid var(--cs-admin-border);
+  border-radius: 14px;
+  padding: 0.4rem;
+  margin: 1.6rem 0 1.2rem;
+  overflow: hidden;
+}
+
+.cs-entry-option {
+  position: relative;
+  z-index: 1;
+  border: none;
+  background: transparent;
+  color: #d7f8f4;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  transition: color 0.25s ease;
+}
+
+.cs-entry-option.is-active {
+  color: #041c1c;
+}
+
+.cs-entry-slider {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(50% - 8px);
+  height: calc(100% - 12px);
+  background: linear-gradient(135deg, var(--cs-admin-accent) 0%, #4fe1d3 100%);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.cs-entry-slider.is-admin {
+  transform: translateX(100%);
+}
+
+.cs-entry-panel {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+}
+
+.cs-entry-panel-content {
+  display: none;
+  background: rgba(8, 20, 34, 0.55);
+  border: 1px solid rgba(149, 248, 236, 0.25);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  color: var(--cs-admin-text);
+}
+
+.cs-entry-panel-content.is-active {
+  display: block;
+}
+
+.cs-entry-panel-content h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+}
+
+.cs-entry-panel-content p {
+  margin: 0;
+  color: var(--cs-admin-muted);
+}
+
+.cs-admin-shell {
+  min-height: calc(100vh - 72px);
+  background: radial-gradient(900px 420px at 80% 20%, rgba(25, 153, 142, 0.18), transparent 60%),
+    linear-gradient(145deg, #07111f 0%, var(--cs-admin-bg) 55%, #0b2234 100%);
+  padding: 2.5rem 0 3rem;
+  color: var(--cs-admin-text);
+}
+
+.cs-admin-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cs-admin-header h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+}
+
+.cs-admin-header p {
+  margin: 0;
+  color: var(--cs-admin-muted);
+}
+
+.cs-admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.6rem;
+}
+
+.cs-admin-tab {
+  border: 1px solid var(--cs-admin-border);
+  background: rgba(12, 24, 39, 0.7);
+  color: var(--cs-admin-text);
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.cs-admin-tab.is-active {
+  background: linear-gradient(135deg, var(--cs-admin-accent) 0%, #4fe1d3 100%);
+  color: #04201d;
+  border-color: transparent;
+}
+
+.cs-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cs-admin-panel {
+  background: var(--cs-admin-panel);
+  border: 1px solid var(--cs-admin-border);
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: 0 20px 40px rgba(2, 12, 20, 0.4);
+}
+
+.cs-admin-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.cs-admin-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.cs-admin-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: #d6f5f2;
+}
+
+.cs-admin-form input,
+.cs-admin-form textarea,
+.cs-admin-form select {
+  background: rgba(7, 18, 30, 0.7);
+  border: 1px solid rgba(136, 230, 222, 0.22);
+  border-radius: 10px;
+  color: #eefcfb;
+  padding: 0.6rem 0.75rem;
+}
+
+.cs-admin-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.cs-admin-btn {
+  background: linear-gradient(135deg, var(--cs-admin-accent) 0%, #41d7ca 100%);
+  border: none;
+  color: #021b19;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 0 14px 26px rgba(20, 138, 128, 0.35);
+}
+
+.cs-admin-btn-outline {
+  background: rgba(10, 24, 38, 0.55);
+  border: 1px solid rgba(139, 234, 226, 0.4);
+  color: #dff8f5 !important;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+}
+
+.cs-admin-btn-outline:hover {
+  background: rgba(24, 47, 70, 0.7);
+  color: #f4fffe !important;
+}
+
+.cs-admin-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.cs-admin-list-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 0.8rem;
+  border: 1px solid rgba(139, 234, 226, 0.18);
+  border-radius: 14px;
+  padding: 1rem;
+  background: rgba(9, 20, 34, 0.6);
+}
+
+.cs-admin-election-info {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.cs-admin-election-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.cs-admin-election-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  color: var(--cs-admin-muted);
+  font-size: 0.9rem;
+}
+
+.cs-admin-election-meta-item {
+  display: grid;
+  gap: 0.25rem;
+  border: 1px solid rgba(139, 234, 226, 0.2);
+  border-radius: 10px;
+  background: rgba(8, 20, 34, 0.42);
+  padding: 0.55rem 0.65rem;
+  min-width: 0;
+}
+
+.cs-admin-election-meta-label {
+  color: rgba(168, 214, 211, 0.88);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cs-admin-election-meta-value {
+  color: var(--cs-admin-text);
+  font-size: 0.87rem;
+  line-height: 1.35;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.cs-admin-election-status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.22rem 0.72rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(139, 234, 226, 0.28);
+  background: rgba(7, 18, 30, 0.8);
+}
+
+.cs-admin-election-status-pill.is-active {
+  color: #aafeea;
+  border-color: rgba(92, 235, 199, 0.45);
+  background: rgba(14, 72, 59, 0.5);
+}
+
+.cs-admin-election-status-pill.is-scheduled {
+  color: #b8e6ff;
+  border-color: rgba(113, 191, 255, 0.4);
+  background: rgba(23, 54, 87, 0.5);
+}
+
+.cs-admin-election-status-pill.is-closed {
+  color: #ffdcb5;
+  border-color: rgba(255, 186, 113, 0.45);
+  background: rgba(85, 54, 21, 0.5);
+}
+
+.cs-admin-election-status-pill.is-inactive {
+  color: #dfdff4;
+  border-color: rgba(179, 179, 205, 0.35);
+  background: rgba(42, 42, 66, 0.52);
+}
+
+.cs-admin-list-item h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.cs-admin-list-item p {
+  margin: 0;
+  color: var(--cs-admin-muted);
+  max-width: 100%;
+}
+
+.cs-admin-list-content {
+  min-width: 0;
+}
+
+.cs-admin-actions select {
+  background: rgba(7, 18, 30, 0.75);
+  border: 1px solid rgba(136, 230, 222, 0.3);
+  color: #f0fffd;
+  border-radius: 10px;
+  padding: 0.45rem 0.6rem;
+}
+
+.cs-admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.cs-admin-election-actions {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding-top: 0.15rem;
+}
+
+.cs-admin-election-actions .btn {
+  min-width: 122px;
+  text-align: center;
+}
+
+.cs-admin-election-candidate-preview {
+  grid-column: 1 / -1;
+  margin-top: 0.1rem;
+  border-top: 1px solid rgba(139, 234, 226, 0.18);
+  padding-top: 0.7rem;
+}
+
+.cs-admin-election-candidate-title {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  color: #d6f5f2;
+  font-weight: 700;
+}
+
+.cs-admin-election-candidate-list {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.cs-admin-election-candidate-list p {
+  margin: 0;
+  padding: 0.35rem 0.55rem;
+  border-radius: 10px;
+  border: 1px solid rgba(139, 234, 226, 0.16);
+  background: rgba(8, 20, 34, 0.5);
+  color: #dff8f5;
+  max-width: 100%;
+}
+
+.cs-admin-actions .btn {
+  white-space: nowrap;
+}
+
+.cs-admin-actions-inline {
+  align-items: center;
+}
+
+.cs-admin-inline-form {
+  width: 100%;
+}
+
+.cs-admin-voter-create {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(139, 234, 226, 0.18);
+}
+
+.cs-admin-danger {
+  border-color: rgba(255, 130, 130, 0.65);
+  color: #ffd7d7 !important;
+}
+
+.cs-admin-panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cs-admin-search {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.cs-admin-search input {
+  background: rgba(7, 18, 30, 0.75);
+  border: 1px solid rgba(136, 230, 222, 0.25);
+  border-radius: 10px;
+  color: #f0fffd;
+  padding: 0.55rem 0.75rem;
+  min-width: 220px;
+}
+
+.cs-admin-table {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.cs-admin-table-scroll {
+  overflow-x: auto;
+}
+
+.cs-admin-table-header,
+.cs-admin-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.65rem 0.8rem;
+  border-radius: 12px;
+}
+
+.cs-admin-table-header {
+  background: rgba(22, 39, 58, 0.8);
+  font-weight: 700;
+}
+
+.cs-admin-table-row {
+  background: rgba(8, 20, 34, 0.62);
+  border: 1px solid rgba(139, 234, 226, 0.15);
+}
+
+.cs-admin-table-voters .cs-admin-table-header,
+.cs-admin-table-voters .cs-admin-table-row {
+  min-width: 1200px;
+  grid-template-columns: 1.1fr 1.2fr 1fr 1.6fr 0.9fr 0.9fr 0.8fr 1.4fr;
+}
+
+.cs-admin-table-candidates .cs-admin-table-header,
+.cs-admin-table-candidates .cs-admin-table-row {
+  min-width: 1080px;
+  grid-template-columns: 1.2fr 1.2fr 0.9fr 0.9fr 0.9fr 1.8fr;
+}
+
+.cs-admin-candidates-panel {
+  margin-top: 1.5rem;
+}
+
+.cs-admin-candidate-form {
+  gap: 1rem;
+}
+
+.cs-admin-candidate-grid {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  align-items: end;
+}
+
+.cs-admin-candidate-grid .cs-admin-field {
+  min-width: 0;
+}
+
+.cs-admin-inline-constituency {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(139, 234, 226, 0.2);
+  border-radius: 12px;
+  background: rgba(8, 20, 34, 0.48);
+}
+
+.cs-admin-inline-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+.cs-candidate-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(136, 230, 222, 0.35);
+  background: rgba(7, 18, 30, 0.8);
+}
+
+.cs-admin-upload-result {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: rgba(11, 26, 42, 0.7);
+  border: 1px solid rgba(139, 234, 226, 0.2);
+}
+
+.cs-admin-guidelines {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--cs-admin-muted);
+}
+
+.cs-admin-muted {
+  color: var(--cs-admin-muted);
+}
+
+@media (max-width: 768px) {
+  .cs-admin-list-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-admin-election-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-admin-election-actions {
+    justify-content: flex-start;
+  }
+
+  .cs-admin-election-actions .btn {
+    min-width: 0;
+  }
+
+  .cs-admin-table-header,
+  .cs-admin-table-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .cs-admin-table-voters .cs-admin-table-header,
+  .cs-admin-table-voters .cs-admin-table-row,
+  .cs-admin-table-candidates .cs-admin-table-header,
+  .cs-admin-table-candidates .cs-admin-table-row {
+    min-width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .cs-admin-candidate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-admin-inline-constituency {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-admin-actions {
+    width: 100%;
+  }
+}

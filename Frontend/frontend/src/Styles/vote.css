@@ -1,0 +1,161 @@
+.cs-vote-card {
+  max-width: 760px;
+  background: linear-gradient(160deg, rgba(14, 27, 42, 0.95) 0%, rgba(20, 34, 52, 0.94) 100%);
+  border: 1px solid rgba(126, 229, 216, 0.28);
+}
+
+.cs-vote-header {
+  border-bottom: 1px solid rgba(149, 248, 236, 0.2);
+}
+
+.cs-vote-alert {
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.cs-lock-panel {
+  padding: 1.4rem 0.75rem 1.1rem;
+}
+
+.cs-lock-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.85rem;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #9efff0;
+  background: rgba(24, 164, 154, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(149, 248, 236, 0.28);
+}
+
+.cs-lock-title {
+  color: #f3fffd;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cs-lock-subtitle {
+  color: #a7c6c3;
+  margin-bottom: 1rem;
+}
+
+.cs-lock-input-group {
+  max-width: 300px;
+}
+
+.cs-lock-input.form-control {
+  height: 50px;
+  border: 1px solid rgba(149, 248, 236, 0.34) !important;
+  background: rgba(8, 17, 27, 0.6) !important;
+  color: #f3fffd !important;
+}
+
+.cs-lock-input.form-control::placeholder {
+  color: #9eb9b6;
+}
+
+.cs-lock-input.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(42, 209, 193, 0.32) !important;
+  border-color: rgba(161, 255, 243, 0.7) !important;
+}
+
+.cs-lock-toggle.btn {
+  border: 1px solid rgba(149, 248, 236, 0.34) !important;
+  border-left: 0 !important;
+  color: #d7f8f4;
+  background: rgba(24, 164, 154, 0.12) !important;
+  font-weight: 600;
+}
+
+.cs-lock-toggle.btn:hover {
+  background: rgba(24, 164, 154, 0.22) !important;
+}
+
+.cs-vote-election-picker {
+  margin: 0 0 1rem;
+}
+
+.cs-vote-election-label {
+  display: block;
+  color: #cce7e4;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.cs-vote-election-select {
+  border: 1px solid rgba(149, 248, 236, 0.3) !important;
+  background: rgba(8, 17, 27, 0.65) !important;
+  color: #f3fffd !important;
+}
+
+.cs-vote-election-select:focus {
+  border-color: rgba(161, 255, 243, 0.75) !important;
+  box-shadow: 0 0 0 0.2rem rgba(42, 209, 193, 0.25) !important;
+}
+
+.cs-vote-load-btn {
+  min-width: 220px;
+}
+
+.cs-candidate-card {
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(149, 248, 236, 0.18) !important;
+  background-color: rgba(9, 19, 30, 0.7) !important;
+}
+
+.cs-candidate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(3, 10, 16, 0.35);
+  border-color: rgba(149, 248, 236, 0.34) !important;
+}
+
+.cs-candidate-selected {
+  border-color: rgba(42, 209, 193, 0.8) !important;
+  box-shadow: 0 16px 28px rgba(18, 133, 125, 0.35);
+}
+
+.cs-candidate-card .form-check-input {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.cs-candidate-card .form-check-input:checked {
+  background-color: #18a49a;
+  border-color: #18a49a;
+}
+
+.cs-candidate-name {
+  color: #f2fffd;
+}
+
+.cs-candidate-party {
+  color: #b8d7d3;
+  font-weight: 500;
+}
+
+.cs-candidate-card .party-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  .cs-vote-card .card-body {
+    padding: 1.1rem !important;
+  }
+
+  .cs-lock-input-group {
+    max-width: 100%;
+  }
+
+  .cs-lock-title {
+    font-size: 1.22rem;
+  }
+
+  .cs-lock-subtitle {
+    font-size: 0.9rem;
+  }
+}

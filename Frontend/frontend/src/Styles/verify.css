@@ -1,0 +1,150 @@
+.cs-verify-card {
+  max-width: 620px;
+}
+
+.cs-verify-header {
+  border-bottom: 1px solid rgba(149, 248, 236, 0.2);
+}
+
+.cs-verify-hash-wrap {
+  position: relative;
+}
+
+.cs-verify-hash {
+  min-height: 94px;
+  padding-right: 86px;
+  border: 1px solid rgba(149, 248, 236, 0.34) !important;
+  border-radius: 12px;
+  background: rgba(8, 17, 27, 0.62) !important;
+  color: #effffd !important;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.95rem;
+  resize: none;
+}
+
+.cs-verify-hash::placeholder {
+  color: #9eb9b6 !important;
+}
+
+.cs-verify-hash:focus {
+  border-color: rgba(161, 255, 243, 0.7) !important;
+  box-shadow: 0 0 0 0.2rem rgba(42, 209, 193, 0.32) !important;
+}
+
+.cs-verify-copy {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 1px solid rgba(149, 248, 236, 0.4) !important;
+  background: rgba(24, 164, 154, 0.15) !important;
+  color: #d7f8f4;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.75rem;
+}
+
+.cs-verify-copy:hover:not(:disabled) {
+  background: rgba(24, 164, 154, 0.26) !important;
+  color: #f4fffd;
+}
+
+.cs-verify-copy:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cs-verify-alert {
+  border-radius: 12px;
+}
+
+.cs-verify-result {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 0.9rem 0.95rem;
+}
+
+.cs-verify-result.is-success {
+  background: rgba(30, 191, 149, 0.14);
+  border-color: rgba(120, 245, 210, 0.45);
+}
+
+.cs-verify-result.is-failed {
+  background: rgba(230, 94, 114, 0.12);
+  border-color: rgba(255, 160, 174, 0.42);
+}
+
+.cs-verify-result-icon {
+  min-width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.cs-verify-result.is-success .cs-verify-result-icon {
+  color: #0d5547;
+  background: rgba(129, 255, 224, 0.75);
+}
+
+.cs-verify-result.is-failed .cs-verify-result-icon {
+  color: #66132a;
+  background: rgba(255, 180, 192, 0.78);
+}
+
+.cs-verify-result h5 {
+  margin: 0 0 0.35rem;
+  color: #effffd;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.cs-verify-result p {
+  margin: 0;
+  color: #c8e4e0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.cs-verify-footer {
+  border-top: 1px solid rgba(149, 248, 236, 0.2);
+  padding: 0.95rem 1rem 1.1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cs-verify-footer span {
+  color: #bce9e3;
+  border: 1px solid rgba(149, 248, 236, 0.28);
+  background: rgba(24, 164, 154, 0.12);
+  padding: 0.25rem 0.62rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+}
+
+@media (max-width: 576px) {
+  .cs-verify-hash {
+    font-size: 0.86rem;
+    padding-right: 74px;
+  }
+
+  .cs-verify-copy {
+    font-size: 0.75rem;
+    padding: 0.24rem 0.58rem;
+  }
+
+  .cs-verify-result {
+    padding: 0.75rem;
+  }
+
+  .cs-verify-footer {
+    gap: 0.45rem;
+  }
+}

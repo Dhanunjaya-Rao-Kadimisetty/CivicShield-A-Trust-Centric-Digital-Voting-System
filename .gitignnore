@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Build folders
+build/
+dist/
+
+# VS Code
+.vscode/
+
+# Logs
+npm-debug.log*
